@@ -5,7 +5,7 @@ import Header from "../components/header";
 import Banner from "../components/community/Banner";
 import CreatePost from "../components/feed/CreatePost";
 import About from "../components/community/About";
-import Feed from "../components/feed";
+import Feed from "../components/feed/Index";
 import useSWR from "swr";
 import { useContext, useEffect, useState } from "react";
 import Login from "../components/Login";
