@@ -18,7 +18,7 @@ const style = {
   content: `w-full space-y-4 lg:w-2/3`,
   infoContainer: `hidden w-1/3 lg:block`,
 };
-// : NextPage
+
 const Home = () => {
   const { currentUser, fetcher } = useContext(RedditContext);
   const [myPosts, setMyPosts] = useState([]);
@@ -30,7 +30,7 @@ const Home = () => {
     if (!data) return;
     setMyPosts(data.data);
   }, [data]);
-  console.log(myPosts);
+  
   const saveAndUpdateUser = async () => {
     if (!currentUser) return;
     const { data, error } = await supabase
@@ -44,12 +44,11 @@ const Home = () => {
         { onConflict: "email" }
       )
       .select();
-    console.log("data::", data);
-    console.log("error", error);
+   
   };
   useEffect(() => {
     saveAndUpdateUser();
-    console.log("Its happen");
+  
   }, [currentUser]);
 
  
