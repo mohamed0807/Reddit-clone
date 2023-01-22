@@ -18,7 +18,7 @@ export const RedditProvider = ({children})=>{
             
           })
         }, []);
-console.log(currentUser.user_metadata)
+
         return (
             <RedditContext.Provider value={{currentUser,fetcher,selectedPost,setSelectedPost}} >
                 {children}
