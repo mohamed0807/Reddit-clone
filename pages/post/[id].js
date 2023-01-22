@@ -20,7 +20,8 @@ const PostView = () => {
       <Header />
       <div className="mx-auto flex w-full max-w-5xl flex-1 space-x-6 py-[5rem] px-6">
         <div className="w-full space-y-4 lg:w-2/3">
-          <Post {...selectedPost} />
+                   {selectedPost && <Post {...selectedPost} />}
+
           <SaveComment postId={selectedPost?.id} />
           <Comments postId={selectedPost?.id} />
         </div>
