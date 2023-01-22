@@ -11,7 +11,6 @@ const style = {
 };
 
 const Info = ({ author, created_at }) => {
-  console.log("CreatedAt", created_at);
   TimeAgo.addLocale(en);
   const timeAgo = new TimeAgo("en-US");
 
