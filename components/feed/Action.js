@@ -28,7 +28,6 @@ const Action = ({ postId }) => {
     if (!data) return;
     setComments(data.data);
   }, [data]);
-  console.log("Comments in Action", comments);
   return (
     <div className={style.wrapper}>
       <div className={style.iconContainer}>
